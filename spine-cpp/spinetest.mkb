@@ -1,0 +1,25 @@
+files
+{
+	[]
+	(src)
+	test.cpp
+}
+
+includepaths
+{
+	src
+}
+
+subprojects
+{
+	iwutil
+  iwgx
+	spine
+}
+#### AUTO GENERATED deployment settings from DeployTool.exe. Do not edit below this line ####
+deployments
+{
+	["Default"]
+	caption='Spine Test'
+	iphone-appid='cz.ger.pe'
+}

@@ -1,0 +1,80 @@
+includepaths
+{
+	"src"
+	"includes"
+}
+
+options 
+{ 
+	arm-cpu=6
+	arm-fpu=vfp
+	optimise-speed
+	enable-exceptions
+}
+
+files
+{
+	["Marmalade"]
+	("src/spine-marm")
+  SkeletonJson.cpp
+  RegionAttachment.cpp
+  Skeleton.cpp
+  AtlasAttachmentLoader.cpp
+  Atlas.cpp
+
+	("includes/spine-marm")
+  SkeletonJson.h
+  spine.h
+  Skeleton.h
+  RegionAttachment.h
+  Atlas.h
+  AtlasAttachmentLoader.h
+
+	["spine"]
+	("includes/spine")
+  SlotData.h
+  Skin.h
+  Slot.h
+  SkeletonData.h
+  Bone.h
+  BoneData.h
+  BaseSkeleton.h
+  BaseSkeletonJson.h
+  BaseAttachmentLoader.h
+  BaseRegionAttachment.h
+  BaseAtlas.h
+  Attachment.h
+  Animation.h
+  
+	("src/spine")
+  Skin.cpp
+  Slot.cpp
+  SkeletonData.cpp
+  Bone.cpp
+  BaseSkeleton.cpp
+  BaseSkeletonJson.cpp
+  BaseRegionAttachment.cpp
+  Animation.cpp
+  BaseAtlas.cpp
+  
+  ["json"]
+  ("includes/json")
+  writer.h
+  value.h
+  reader.h
+  forwards.h
+  json.h
+  autolink.h
+  config.h
+  features.h
+  
+  ("src/json")
+  json_writer.cpp
+  json_value.cpp
+  json_valueiterator.inl
+  json_reader.cpp
+  json_internalmap.inl
+  json_internalarray.inl
+  json_batchallocator.h
+}
+
