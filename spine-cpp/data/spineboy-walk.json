@@ -276,6 +276,7 @@
 	}
 },
 "slots": {
+/*
 	"torso": {
 		"attachment": [
 			{ "time": 0.4333, "name": null },
@@ -288,6 +289,7 @@
 			{ "time": 0.9333, "color": "ff0f00c1" }
 		]
 	},
+*/
 	"eyes": {
 		"attachment": [
 			{ "time": 0.2, "name": "eyes-closed" },
