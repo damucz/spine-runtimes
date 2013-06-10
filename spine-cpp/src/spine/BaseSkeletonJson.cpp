@@ -60,12 +60,12 @@ SkeletonData* BaseSkeletonJson::readSkeletonData (const string &json) const {
 	return readSkeletonData(begin, end);
 }
 
+static string const ATTACHMENT_REGION = "region";
+static string const ATTACHMENT_REGION_SEQUENCE = "regionSequence";
+
 SkeletonData* BaseSkeletonJson::readSkeletonData (const char *begin, const char *end) const {
 	if (!begin) throw invalid_argument("begin cannot be null.");
 	if (!end) throw invalid_argument("end cannot be null.");
-
-	static string const ATTACHMENT_REGION = "region";
-	static string const ATTACHMENT_REGION_SEQUENCE = "regionSequence";
 
 	Json::Value root;
 	Json::Reader reader;
@@ -207,16 +207,16 @@ static void readCurve (CurveTimeline *timeline, int keyframeIndex, const Json::V
 		timeline->setCurve(keyframeIndex, (float)curve[0u].asDouble(), (float)curve[1u].asDouble(), (float)curve[2u].asDouble(), (float)curve[3u].asDouble());
 }
 
+static string const TIMELINE_SCALE = "scale";
+static string const TIMELINE_ROTATE = "rotate";
+static string const TIMELINE_TRANSLATE = "translate";
+static string const TIMELINE_ATTACHMENT = "attachment";
+static string const TIMELINE_COLOR = "color";
+
 Animation* BaseSkeletonJson::readAnimation (const char *begin, const char *end, const SkeletonData *skeletonData) const {
 	if (!begin) throw invalid_argument("begin cannot be null.");
 	if (!end) throw invalid_argument("end cannot be null.");
 	if (!skeletonData) throw invalid_argument("skeletonData cannot be null.");
-
-	static string const TIMELINE_SCALE = "scale";
-	static string const TIMELINE_ROTATE = "rotate";
-	static string const TIMELINE_TRANSLATE = "translate";
-	static string const TIMELINE_ATTACHMENT = "attachment";
-	static string const TIMELINE_COLOR = "color";
 
 	vector<Timeline*> timelines;
 	float duration = 0;
